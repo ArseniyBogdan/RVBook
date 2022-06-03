@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/root_element_login_activity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstSettings.LoginActivity">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="230sp"
+        android:layout_height="230sp"
+        android:layout_marginTop="-100dp"
+        android:alpha="0.5"
+        android:background="@drawable/circle_shape_fragment1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:alpha="0.5"
+        android:layout_width="230sp"
+        android:layout_height="230sp"
+        android:layout_marginStart="-100dp"
+        android:background="@drawable/circle_shape_fragment2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/SCHEDULE_DAYS"
+        android:layout_width="match_parent"
+        android:layout_height="56sp">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@android:style/Widget.Holo.PopupMenu">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:paddingTop="6sp"
+                    android:layout_width="200sp"
+                    android:layout_height="match_parent"
+                    android:text="@string/app_name"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    />
+            </FrameLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="260dp"
+        android:gravity="center_horizontal"
+        android:text="С возвращением!"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout_LoginPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInput_LoginPassword"
+            android:layout_width="300sp"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:hint="@string/Password"
+            app:endIconMode="clear_text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/CheckBox_RememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Запомнить меня"
+        app:layout_constraintBottom_toTopOf="@+id/button_Login_confirm"
+        app:layout_constraintStart_toStartOf="@+id/button_Login_confirm" />
+
+    <Button
+        android:id="@+id/button_Login_confirm"
+        android:layout_width="300sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/BUTTON_CONFIRM"
+        android:text="Подтвердить"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout_LoginPassword" />
+
+    <ImageView
+        android:layout_width="300sp"
+        android:layout_height="200sp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/undraw_teaching_f1cm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

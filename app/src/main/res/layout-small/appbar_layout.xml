@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+    <com.google.android.material.appbar.AppBarLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@color/SCHEDULE_DAYS"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@android:style/Widget.Holo.PopupMenu">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Date_TextView_Material2"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:hint="Date"
+                    android:layout_marginBottom="5sp"
+                    app:hintTextColor="@color/black"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    app:boxStrokeColor="@color/black"
+                    >
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:id="@+id/Date_Text2"
+                        android:inputType="none"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="15sp"
+
+                    android:clickable="true"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/ic_edittext"
+                    android:id="@+id/date_icon"
+                    android:background="?android:selectableItemBackground"
+                    android:focusable="true" />
+            </FrameLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.recyclerviewtest.MultiScrollView
+            android:id="@+id/field_y"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:fadingEdgeLength="0dp"
+            android:focusable="true"
+            android:isScrollContainer="true"
+            android:overScrollMode="never"
+            android:requiresFadingEdge="none"
+            android:scrollbars="none"
+            android:splitMotionEvents="true"
+            tools:context="example.multiscroll.MainActivity">
+
+            <com.example.recyclerviewtest.MyHorizontalScrollView
+                android:id="@+id/field_x"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdgeLength="0dp"
+                android:focusable="false"
+                android:isScrollContainer="true"
+                android:overScrollMode="never"
+                android:requiresFadingEdge="none"
+                android:scrollbars="none"
+                android:splitMotionEvents="true">
+
+                <TableLayout
+                    android:id="@+id/table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" />
+            </com.example.recyclerviewtest.MyHorizontalScrollView>
+        </com.example.recyclerviewtest.MultiScrollView>
+    </RelativeLayout>
+</LinearLayout>

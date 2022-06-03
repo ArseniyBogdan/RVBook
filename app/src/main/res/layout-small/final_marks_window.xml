@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/root_element_FinalMarks"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:background="@color/SETTINGS_WINDOW_TOP">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:text="Зависимость итоговых отметок от среднего балла по срезовым работам"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@android:color/black" />
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/SCHEDULE_FRAGMENT2"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="208sp"
+                android:background="@drawable/cell_shape_fragment2"
+                android:padding="15sp"
+                android:gravity="center"
+                android:text="Отметка"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <FrameLayout
+                android:layout_width="106sp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="104sp"
+                android:layout_gravity="end"
+                android:background="@drawable/cell_shape_fragment2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Верхняя граница"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="105sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@drawable/cell_shape_fragment2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Нижняя граница"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </FrameLayout>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/SCHEDULE_FRAGMENT2"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="208sp"
+                android:background="@drawable/cell_shape_fragment1"
+                android:padding="10sp"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <FrameLayout
+                android:layout_width="106sp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="104sp"
+                android:layout_gravity="end"
+                android:background="@drawable/cell_shape_fragment1"
+                >
+
+                <TextView
+                    android:id="@+id/TextViewUpperBound5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="4.75"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="105sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@drawable/cell_shape_fragment1"
+                >
+                <TextView
+                    android:id="@+id/TextViewBottomBound5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="4.50"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </FrameLayout>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/SCHEDULE_FRAGMENT2"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="208sp"
+                android:background="@drawable/cell_shape_fragment2"
+                android:padding="10sp"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <FrameLayout
+                android:layout_width="106sp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="104sp"
+                android:layout_gravity="end"
+                android:background="@drawable/cell_shape_fragment2"
+                >
+
+                <TextView
+                    android:id="@+id/TextViewUpperBound4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="3.75"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="105sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@drawable/cell_shape_fragment2"
+                >
+
+                <TextView
+                    android:id="@+id/TextViewBottomBound4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="3.50"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </FrameLayout>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/SCHEDULE_FRAGMENT2"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="208sp"
+                android:background="@drawable/cell_shape_fragment1"
+                android:padding="10sp"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <FrameLayout
+                android:layout_width="106sp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="104sp"
+                android:layout_gravity="end"
+                android:background="@drawable/cell_shape_fragment1"
+                >
+
+                <TextView
+                    android:id="@+id/TextViewUpperBound3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="2.75"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="105sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@drawable/cell_shape_fragment1"
+                >
+
+                <TextView
+                    android:id="@+id/TextViewBottomBound3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="2.50"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </FrameLayout>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:background="@color/SETTINGS_WINDOW_DISCLAIMER"
+                android:text="Пояснение: отметка 5 ставится без учёта срезовых работ при среднем балле выше 4.75 (верхняя граница) и балле от 4.5 (нижняя граница) до 4.75, если средний балл по срезовым работам выше 4.50."
+                />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/SETTINGS_WINDOW_TOP"
+            android:padding="5sp"
+            android:layout_gravity="bottom">
+
+            <TextView
+                android:id="@+id/button_cancel_statistics"
+                android:layout_width="80sp"
+                android:layout_height="30sp"
+                android:layout_gravity="end"
+                android:gravity="center"
+                android:text="Закрыть"
+                android:textColor="@color/PRIMARY_TEXT"
+                android:textSize="14sp" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

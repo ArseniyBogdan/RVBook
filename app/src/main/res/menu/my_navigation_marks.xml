@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_Mark1"
+        android:title="@string/Mark1"
+        android:icon="@drawable/ic_mark_first_black" />
+    <item android:id="@+id/action_Mark2"
+        android:title="@string/Mark2"
+        android:icon="@drawable/ic_mark_second_black" />
+    </menu>

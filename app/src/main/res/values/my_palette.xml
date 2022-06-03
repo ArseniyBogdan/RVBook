@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="DARK_PRIMARY_COLOR">#455A64</color>
+    <color name="LIGHT_PRIMARY_COLOR">#CFD8DC</color>
+    <color name="PRIMARY_COLOR">#607D8B</color>
+    <color name="TEXT_ICONS">#FFFFFF</color>
+    <color name="ACCENT_COLOR">#FF5722</color>
+    <color name="PRIMARY_TEXT">#212121</color>
+    <color name="SECONDARY_TEXT">#757575</color>
+    <color name="DIVIDER_COLOR">#BDBDBD</color>
+
+
+
+    <color name="SCHEDULE_DAYS">#FFFAE0</color>
+    <color name="SCHEDULE_DAY_SELECTED">#FFEED3</color>
+    <color name="SCHEDULE_FRAGMENT1">#F0FFFE</color>
+    <color name="SCHEDULE_FRAGMENT2">#DBFFFD</color>
+    <color name="TABLE_FRAGMENT_WITH_CORNERS">#E3FFE2</color>
+    <color name="TABLE_FRAGMENT_WITH_CORNERS_OK">#FFC1BD</color>
+    <color name="SETTINGS_WINDOW_TOP">#FFF7E7</color>
+    <color name="SETTINGS_WINDOW_DISCLAIMER">#FFFDDC</color>
+    <color name="IMPORTANT_WORK_COLOR">#FF8383</color>
+    <color name="BUTTON_CONFIRM">#C8FFFC</color>
+    <color name="GREY">#A7A7A7</color>
+
+
+
+</resources>

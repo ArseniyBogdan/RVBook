@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/settings_group" >
+        <item
+            android:id="@+id/itemStatics"
+            android:title="Отображение статистики"/>
+        <item
+            android:id="@+id/itemImportantWorks"
+            android:title="Виды работ"/>
+        <item
+            android:id="@+id/itemTimePeriods"
+            android:title="Временные периоды"/>
+        <item
+            android:id="@+id/itemFinalMarks"
+            android:title="Итоговые отметки"/>
+        <item
+            android:id="@+id/itemResetPassword"
+            android:title="Изменить пароль"/>
+    </group>
+</menu>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_Group"
+        android:title="@string/Groups"
+        android:icon="@drawable/ic_menu_group_black" />
+    <item android:id="@+id/action_Schedule"
+        android:title="@string/Schedule"
+        android:icon="@drawable/ic_menu_schedule_black" />
+    </menu>

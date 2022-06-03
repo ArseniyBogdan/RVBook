@@ -1,0 +1,58 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.RecyclerViewTest" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:fontFamily">@font/poppinsbold</item>
+        <item name="fontFamily">@font/poppinsbold</item>
+        <item name="colorPrimary">@color/PRIMARY_COLOR</item>
+        <item name="colorPrimaryVariant">@color/DARK_PRIMARY_COLOR</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/ACCENT_COLOR</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="materialCalendarTheme">@style/ThemeOverlay_App_DatePicker</item>
+    </style>
+
+    <style name="ThemeOverlay_App_DatePicker" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">@color/LIGHT_PRIMARY_COLOR</item>
+        <item name="colorOnPrimary">@color/DARK_PRIMARY_COLOR</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
+        <!-- Customize text field of the text input mode. -->
+    </style>
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="ThemeOverlay.AppCompat.Dialog.Alert.TestDialogTheme">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="tabPaddingTop">80sp</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">22sp</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+
+    
+
+    <style name="Text">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+</resources>

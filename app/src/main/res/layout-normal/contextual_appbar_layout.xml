@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/DARK_PRIMARY_COLOR"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@android:style/Widget.Holo.PopupMenu"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:clickable="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_cancel_white"
+                android:id="@+id/cancel_icon_Delete_Student"
+                android:background="?android:selectableItemBackground"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="285sp"
+                android:layout_height="match_parent"
+                android:text="Выбран 1 ученик"
+                android:layout_marginStart="40sp"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:id="@+id/selected_students"/>
+
+            <ImageView
+                android:layout_gravity="end"
+                android:layout_marginEnd="10sp"
+                android:clickable="true"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:src="@drawable/ic_delete_white"
+                android:id="@+id/delete_icon_Student"
+                android:background="?android:selectableItemBackground"
+                android:focusable="true" />
+        </FrameLayout>
+    </androidx.appcompat.widget.Toolbar>
+</com.google.android.material.appbar.AppBarLayout>

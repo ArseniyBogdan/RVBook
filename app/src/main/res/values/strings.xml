@@ -1,0 +1,50 @@
+<resources>
+    <string name="First_Name">Имя</string>
+    <string name="Second_Name">Фамилия</string>
+    <string name="Password">Пароль</string>
+    <string name="Confirm_Password">Подтверждение пароля</string>
+    <string name="Mark1">Оценка 1</string>
+    <string name="Mark2">Оценка 2</string>
+    <string name="Groups">Группы</string>
+    <string name="Schedule">Расписание</string>
+    <string name="app_name">RecyclerViewTest</string>
+    <string name="Add_student">Список учеников</string>
+    <string name="Add_mark">Добавить отметку</string>
+    <string name="Get_marks">Вывести отметки</string>
+    <string name="Delete_table">Удалить группу</string>
+    <string name="Date">Дата</string>
+    <string name="Description">Описание</string>
+    <string name="Mark_Type">Тип оценки</string>
+    <string name="Add_Date_Hint">Введите дату</string>
+    <string name="Save">Сохранить</string>
+    <string name="Cancel">Отменить</string>
+    <string name="GetMarksPeriod">Вывести отметки за период</string>
+    <string name="From">От:</string>
+    <string name="To">До:</string>
+    <string name="PrintMarks">Вывести</string>
+    <string-array name="Types">
+        <item>Домашнее задание</item>
+        <item>Ответ на уроке</item>
+        <item>Самостоятельная работа</item>
+        <item>Проверочная работа</item>
+        <item>Контрольная работа</item>
+    </string-array>
+    <string-array name="Marks">
+        <item> </item>
+        <item>.</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="MarksWithText">
+        <item>Оценка:  </item>
+        <item>Оценка: .</item>
+        <item>Оценка: 2</item>
+        <item>Оценка: 3</item>
+        <item>Оценка: 4</item>
+        <item>Оценка: 5</item>
+    </string-array>
+    <string name="mtrl_picker_confirm" description="Button text to indicate that the widget will save the user's selection [CHAR_LIMIT=16]">Выбрать</string>
+    <string name="mtrl_picker_cancel" description="Button text to indicate that the widget will ignore the user's selection [CHAR_LIMIT=16]" translatable="false">Отменить</string>
+</resources>

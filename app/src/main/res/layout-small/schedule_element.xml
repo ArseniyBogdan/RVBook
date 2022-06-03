@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cell_shape"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/TimeView"
+            android:paddingTop="4sp"
+            android:layout_width="70sp"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_height="60sp"
+            android:text="11:50 12:30"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppinsbold"
+            />
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5sp"
+        android:divider="@color/black"
+        android:showDividers="middle"
+        >
+    <TextView
+        android:id="@+id/SubjectTextView"
+        android:padding="5sp"
+        android:layout_marginStart="70sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="10 А класс: Русский язык"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinsbold"
+        />
+    </LinearLayout>
+
+</FrameLayout>
