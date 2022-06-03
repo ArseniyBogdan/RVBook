@@ -42,7 +42,7 @@ public class DBManager {
     private static final String DATAPASS_TABLE = "pass_table";
     private static String key = "pspspsps";
     public static String vector="4444fhfhdjdjfjfjfkfffwr4t45464";
-    private static final String block="fhgodksr";
+    private static final String block="fhgodksrfhgodksr";
 
     public static byte[] getHash(String password) {
         MessageDigest digest=null;
@@ -72,7 +72,7 @@ public class DBManager {
         byte[] encodedBytes = null;
         try {
             Cipher c = Cipher.getInstance("AES/CTR/NoPadding");
-            IvParameterSpec ivParams = new IvParameterSpec(block.getBytes());
+            IvParameterSpec ivParams = new IvParameterSpec(block.getBytes(StandardCharsets.UTF_8));
             c.init(Cipher.ENCRYPT_MODE, sks, ivParams);
             encodedBytes = c.doFinal(str.getBytes(StandardCharsets.UTF_8));
         } catch (Exception e) {
