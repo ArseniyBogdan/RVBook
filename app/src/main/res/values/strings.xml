@@ -7,7 +7,7 @@
     <string name="Mark2">Оценка 2</string>
     <string name="Groups">Группы</string>
     <string name="Schedule">Расписание</string>
-    <string name="app_name">RecyclerViewTest</string>
+    <string name="app_name">RVBook</string>
     <string name="Add_student">Список учеников</string>
     <string name="Add_mark">Добавить отметку</string>
     <string name="Get_marks">Вывести отметки</string>
