@@ -72,7 +72,7 @@ public class DBManager {
         byte[] encodedBytes = null;
         try {
             Cipher c = Cipher.getInstance("AES/CTR/NoPadding");
-            IvParameterSpec ivParams = new IvParameterSpec(block.getBytes(StandardCharsets.UTF_8));
+            IvParameterSpec ivParams = new IvParameterSpec(block.getBytes());
             c.init(Cipher.ENCRYPT_MODE, sks, ivParams);
             encodedBytes = c.doFinal(str.getBytes(StandardCharsets.UTF_8));
         } catch (Exception e) {
@@ -387,7 +387,7 @@ public class DBManager {
         cv.put(DBConstants.STUDENT_NAMES,  Encrypt(nameStudent));
         db.insert("GROUP_TABLE_" + Table_id, null, cv);
         db.execSQL("ALTER TABLE " + "MARK_TABLE_" + Table_id + " ADD COLUMN " + nameStudent.replace(" ", "_") + " TEXT"); //добавление столбца ученика в таблицу оценок
-        SortTableStudents(nameGroup);
+        SortTableStudents(nameGroup, nameStudent);
     }
 
     public void insertToMarks(String name_group, ArrayList<String> nameList, String data, String type, String description, String WhichMark, ArrayList<String> marks){ // ф-ия добавления оценок в таблицу группы(MARK_TABLE_id)
@@ -565,7 +565,7 @@ public class DBManager {
             do {
                 for (String cn : cursor.getColumnNames()) {
                     if(!cn.equals("id") && !NameSelectedStudents.contains(cn.replace("_", " "))){
-                        cv.put(cn,  Encrypt(cursor.getString(cursor.getColumnIndex(cn))));
+                        cv.put(cn,  cursor.getString(cursor.getColumnIndex(cn)));
                     }
                 }
                 db.insert("MARK_TABLE_BUFFER", null, cv);
@@ -1065,7 +1065,7 @@ public class DBManager {
     }
 
     @SuppressLint("Range")
-    public void SortTableStudents(String TableName){ // сортировка в таблице имён студентов
+    public void SortTableStudents(String TableName, String nameStudent){ // сортировка в таблице имён студентов
         String Table_id = GetTableID(TableName);
         DecryptStudentsTable(TableName);
         Cursor c = db.query("GROUP_TABLE_" + Table_id, null, null, null, null, null, DBConstants.STUDENT_NAMES);
@@ -1083,11 +1083,11 @@ public class DBManager {
                 ch.close();
             }
         }
-        SortTableMarksByNames(TableName);
+        SortTableMarksByNames(TableName, nameStudent);
     }
 
     @SuppressLint("Range")
-    public void SortTableMarksByNames(String TableName){ // ф-ия сортировки таблицы оценок по именам
+    public void SortTableMarksByNames(String TableName, String StudentName){ // ф-ия сортировки таблицы оценок по именам
         // создаём буферную таблицу для сортировки
         db.execSQL("CREATE TABLE IF NOT EXISTS " + "MARK_TABLE_BUFFER" +
                 " (" + DBConstants._ID + " INTEGER PRIMARY KEY," + DBConstants.DATE + " TEXT," +
@@ -1107,9 +1107,12 @@ public class DBManager {
             do {
                 for (String cn : cursor.getColumnNames()) {
                     if(!cn.equals("id")){
-                        cv.put(cn,  cursor.getString(cursor.getColumnIndex(cn)));
+                        String stroka = cursor.getString(cursor.getColumnIndex(cn));
+                        cv.put(cn,  stroka);
                     }
                 }
+                // при добавлении нового студента шифруем пустые поля
+                cv.put(StudentName.replace(" ", "_"), Encrypt(" "));
                 db.insert("MARK_TABLE_BUFFER", null, cv);
 
             } while (cursor.moveToNext());
