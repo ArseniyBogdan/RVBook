@@ -138,6 +138,11 @@ public class StudentsActivity extends AppCompatActivity {
         a_builder.setCancelable(true)
                 .setPositiveButton("Сохранить", (dialog, which) -> {
                     String NewStudentName = Objects.requireNonNull(NameField.getText()).toString();
+                    if(NewStudentName.replace(" ", "").length() ==  0
+                            || !InputValidation(NewStudentName)){
+                        Snackbar.make(students, "Некорретно введены данные", Snackbar.LENGTH_SHORT).show(); //Небольшое уведомление в нижней части экрана, в котором говорится, что пользователь не ввёл название группы
+                        return;
+                    }
                     if(!NewStudentName.equals(StudentName)){
                         // замена имени студента в БД
                         dbManager.RenameStudent(name_group, StudentName, NewStudentName);

@@ -887,7 +887,6 @@ public class DBManager {
         else{
             time = Hours2 + ":" + Minutes2 + "-" + Hours1 + ":" + Minutes1;
         }
-//        new ServerManager().execute("INSERT_INTO_SCHEDULE", "Olezha", GetDayOfTheWeek(DayOfTheWeek), Group, time);
         cv.put(DBConstants.GROUP_NAME,  Encrypt(Group));
         cv.put(DBConstants.TIME, Encrypt(time));
         db.insert(DBConstants.SCHEDULE_TABLE + DayOfTheWeek, null, cv);
@@ -1218,7 +1217,6 @@ public class DBManager {
             }
         }
 
-//        new ServerManager().execute("UPDATE_SCHEDULE", "Olezha", GetDayOfTheWeek(DayOfTheWeek), Group, time2, time.replace(" ","-"));
         ContentValues cv = new ContentValues();
         cv.put(DBConstants.TIME, Encrypt(time2));
         cv.put(DBConstants.GROUP_NAME, Encrypt(Group));

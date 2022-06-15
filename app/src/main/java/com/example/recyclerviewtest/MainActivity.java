@@ -83,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
 
 //        this.deleteDatabase("database_for_diary"); //удаление базы данных
-//        new ServerManager().execute("INSERT_INTO_SCHEDULE", "Olezha", "Monday", "11th class", "10:00-10:40");
 
 
         instance = this;
